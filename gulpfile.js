@@ -45,7 +45,7 @@ jsonSources = [outputDir + 'js/*.json'];
 
 gulp.task('coffee', function() {
   gulp.src(coffeeSources)
-    .pipe(coffee({ bare: true })
+    .pipe(coffee({ bare: true }) //it compiles the js without putting it in a safety wrapper like it normally would
     .on('error', gutil.log))
     .pipe(gulp.dest('components/scripts'))
 });
